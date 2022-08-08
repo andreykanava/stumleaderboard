@@ -3,8 +3,14 @@ import discord
 from discord.ext import commands
 import json
 import time
+from PIL import Image
+from PIL import ImageDraw
+from PIL import ImageFont
 
 client = commands.Bot(command_prefix='+', intents = discord.Intents(messages = True, guild_messages = True, members = True, guilds = True, voice_states = True))
+
+myFont = ImageFont.truetype('minecraft.ttf', 55)
+
 ever = {}
 week = {}
 month = {}
@@ -64,18 +70,34 @@ async def week_vipe():
         voice = round(week[member.id]["voice"] / 120)
         reyt[member.id] = week[member.id]["text"] + voice
     sorted_reyt = {k: b for k, b in sorted(reyt.items(), key=lambda element: element[1], reverse=True)}
-    embed = discord.Embed(color=discord.Color.green())
     for i in range(3):
       keys_list = list(sorted_reyt)
       username = client.get_user(keys_list[i])
       reyting = sorted_reyt[keys_list[i]]
-      embed.add_field(name=f"{i+1}", value=f'{username}, {reyting}')
+      if i+1 == 1:
+        my_image = Image.open("maket.png")
+        image_editable = ImageDraw.Draw(my_image)
+        text = f"{i+1}. {username}"
+        image_editable.text((620,211), text, (125, 95, 53), font=myFont)
+        my_image.save("result.png")
+      if i+1 == 2:
+        my_image = Image.open("result.png")
+        image_editable = ImageDraw.Draw(my_image)
+        text = f"{i+1}. {username}"
+        image_editable.text((620,429), text, (125, 95, 53), font=myFont)
+        my_image.save("result.png")
+      if i+1 == 3:
+        my_image = Image.open("result.png")
+        image_editable = ImageDraw.Draw(my_image)
+        text = f"{i+1}. {username}"
+        image_editable.text((620,647), text, (125, 95, 53), font=myFont)
+        my_image.save("result.png")
     chat = client.get_channel(1005796493757780019)
-    await chat.send(embed=embed)
+    await chat.send(file=discord.File('result.png'))
     for guild in client.guilds:
       for member in guild.members:
         week[member.id] = {"voice": 0, "text": 0}
-    await asyncio.sleep(604800)
+    await asyncio.sleep(60)
 
 
 async def month_vipe():
@@ -87,14 +109,30 @@ async def month_vipe():
         voice = round(month[member.id]["voice"] / 120)
         reyt[member.id] = month[member.id]["text"] + voice
     sorted_reyt = {k: b for k, b in sorted(reyt.items(), key=lambda element: element[1], reverse=True)}
-    embed = discord.Embed(color=discord.Color.green())
     for i in range(3):
       keys_list = list(sorted_reyt)
       username = client.get_user(keys_list[i])
       reyting = sorted_reyt[keys_list[i]]
-      embed.add_field(name=f"{i+1}", value=f'{username}, {reyting}')
+      if i+1 == 1:
+        my_image = Image.open("maket.png")
+        image_editable = ImageDraw.Draw(my_image)
+        text = f"{i+1}. {username}"
+        image_editable.text((620,211), text, (125, 95, 53), font=myFont)
+        my_image.save("result.png")
+      if i+1 == 2:
+        my_image = Image.open("result.png")
+        image_editable = ImageDraw.Draw(my_image)
+        text = f"{i+1}. {username}"
+        image_editable.text((620,429), text, (125, 95, 53), font=myFont)
+        my_image.save("result.png")
+      if i+1 == 3:
+        my_image = Image.open("result.png")
+        image_editable = ImageDraw.Draw(my_image)
+        text = f"{i+1}. {username}"
+        image_editable.text((620,647), text, (125, 95, 53), font=myFont)
+        my_image.save("result.png")
     chat = client.get_channel(1005796493757780019)
-    await chat.send(embed=embed)
+    await chat.send(file=discord.File('result.png'))
     for guild in client.guilds:
       for member in guild.members:
         month[member.id] = {"voice": 0, "text": 0}
