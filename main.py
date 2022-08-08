@@ -70,12 +70,17 @@ async def week_vipe():
         voice = round(week[member.id]["voice"] / 120)
         reyt[member.id] = week[member.id]["text"] + voice
     sorted_reyt = {k: b for k, b in sorted(reyt.items(), key=lambda element: element[1], reverse=True)}
+    my_image = Image.open("maket.png")
+    image_editable = ImageDraw.Draw(my_image)
+    text = f"Недільний рейтинг"
+    image_editable.text((255,155), text, (125, 95, 53), font=myFont)
+    my_image.save("result.png")
     for i in range(3):
       keys_list = list(sorted_reyt)
       username = client.get_user(keys_list[i])
       reyting = sorted_reyt[keys_list[i]]
       if i+1 == 1:
-        my_image = Image.open("maket.png")
+        my_image = Image.open("result.png")
         image_editable = ImageDraw.Draw(my_image)
         text = f"{i+1}. {username}"
         image_editable.text((620,211), text, (125, 95, 53), font=myFont)
@@ -97,7 +102,7 @@ async def week_vipe():
     for guild in client.guilds:
       for member in guild.members:
         week[member.id] = {"voice": 0, "text": 0}
-    await asyncio.sleep(604800)
+    await asyncio.sleep(120) #604800
 
 
 async def month_vipe():
@@ -109,6 +114,11 @@ async def month_vipe():
         voice = round(month[member.id]["voice"] / 120)
         reyt[member.id] = month[member.id]["text"] + voice
     sorted_reyt = {k: b for k, b in sorted(reyt.items(), key=lambda element: element[1], reverse=True)}
+    my_image = Image.open("maket.png")
+    image_editable = ImageDraw.Draw(my_image)
+    text = f"Місячний рейтинг"
+    image_editable.text((255,155), text, (125, 95, 53), font=myFont)
+    my_image.save("result.png")
     for i in range(3):
       keys_list = list(sorted_reyt)
       username = client.get_user(keys_list[i])
@@ -136,6 +146,6 @@ async def month_vipe():
     for guild in client.guilds:
       for member in guild.members:
         month[member.id] = {"voice": 0, "text": 0}
-    await asyncio.sleep(2592000)
+    await asyncio.sleep(120)
 
 client.run('MTAwNTQ3NDM3MzIzMjI1MDk3MQ.GzM1u6.27UKqUdBdJdqCFrqZI22_ThHOkM2z-BZqDszvU')
