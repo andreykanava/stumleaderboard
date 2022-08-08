@@ -97,7 +97,7 @@ async def week_vipe():
     for guild in client.guilds:
       for member in guild.members:
         week[member.id] = {"voice": 0, "text": 0}
-    await asyncio.sleep(60)
+    await asyncio.sleep(604800)
 
 
 async def month_vipe():
