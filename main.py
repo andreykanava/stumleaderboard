@@ -1,7 +1,6 @@
 import asyncio
 import discord
 from discord.ext import commands
-import json
 import time
 from discord.utils import get
 from PIL import Image
@@ -133,68 +132,68 @@ async def week_vipe():
       if i+1 == 1:
         my_image = Image.open("week_maket.png")
         image_editable = ImageDraw.Draw(my_image)
-        text = f"꧁{username} - {reyting}"
-        image_editable.text((381,489), text, (0, 0, 0), font=myFont)
+        text = f"{username} - {reyting}"
+        image_editable.text((381,490), text, (0, 0, 0), font=myFont)
         my_image.save("week_result.png")
       if i+1 == 2:
         my_image = Image.open("week_result.png")
         image_editable = ImageDraw.Draw(my_image)
         text = f"{username} - {reyting}"
-        image_editable.text((381,592), text, (0, 0, 0), font=myFont)
+        image_editable.text((381,597), text, (0, 0, 0), font=myFont)
         my_image.save("week_result.png")
       if i+1 == 3:
         my_image = Image.open("week_result.png")
         image_editable = ImageDraw.Draw(my_image)
         text = f"{username} - {reyting}"
-        image_editable.text((381,695), text, (0, 0, 0), font=myFont)
+        image_editable.text((381,693), text, (0, 0, 0), font=myFont)
         my_image.save("week_result.png")
       if i+1 == 4:
         my_image = Image.open("week_result.png")
         image_editable = ImageDraw.Draw(my_image)
         text = f"{username} - {reyting}"
-        image_editable.text((381,798), text, (0, 0, 0), font=myFont)
+        image_editable.text((381,797), text, (0, 0, 0), font=myFont)
         my_image.save("week_result.png")
       if i+1 == 5:
         my_image = Image.open("week_result.png")
         image_editable = ImageDraw.Draw(my_image)
         text = f"{username} - {reyting}"
-        image_editable.text((381,893), text, (0, 0, 0), font=myFont)
+        image_editable.text((381,896), text, (0, 0, 0), font=myFont)
         my_image.save("week_result.png")
       if i+1 == 6:
         my_image = Image.open("week_result.png")
         image_editable = ImageDraw.Draw(my_image)
         text = f"{username} - {reyting}"
-        image_editable.text((980,489), text, (0, 0, 0), font=myFont)
+        image_editable.text((980,490), text, (0, 0, 0), font=myFont)
         my_image.save("week_result.png")
       if i+1 == 7:
         my_image = Image.open("week_result.png")
         image_editable = ImageDraw.Draw(my_image)
         text = f"{username} - {reyting}"
-        image_editable.text((980,592), text, (0, 0, 0), font=myFont)
+        image_editable.text((980,597), text, (0, 0, 0), font=myFont)
         my_image.save("week_result.png")
       if i+1 == 8:
         my_image = Image.open("week_result.png")
         image_editable = ImageDraw.Draw(my_image)
         text = f"{username} - {reyting}"
-        image_editable.text((980,695), text, (0, 0, 0), font=myFont)
+        image_editable.text((980,692), text, (0, 0, 0), font=myFont)
         my_image.save("week_result.png")
       if i+1 == 9:
         my_image = Image.open("week_result.png")
         image_editable = ImageDraw.Draw(my_image)
         text = f"{username} - {reyting}"
-        image_editable.text((980,798), text, (0, 0, 0), font=myFont)
+        image_editable.text((980,797), text, (0, 0, 0), font=myFont)
         my_image.save("week_result.png")
       if i+1 == 10:
         my_image = Image.open("week_result.png")
         image_editable = ImageDraw.Draw(my_image)
         text = f"{username} - {reyting}"
-        image_editable.text((980,901), text, (0, 0, 0), font=myFont)
+        image_editable.text((980,898), text, (0, 0, 0), font=myFont)
         my_image.save("week_result.png")
       if i+1 == 11:
         my_image = Image.open("week_result.png")
         image_editable = ImageDraw.Draw(my_image)
         text = f"{client.get_user(top_week)} - {reyting}"
-        image_editable.text((635,1030), text, (0, 0, 0), font=myFont)
+        image_editable.text((635,1026), text, (0, 0, 0), font=myFont)
         my_image.save("week_result.png")
     chat = client.get_channel(1007301750895677491)
     embed = discord.Embed(
@@ -240,26 +239,26 @@ async def month_vipe():
       if i+1 == 1:
         my_image = Image.open("month_maket.png")
         image_editable = ImageDraw.Draw(my_image)
-        text = f"꧁{username} - {reyting}"
-        image_editable.text((381,489), text, (0, 0, 0), font=myFont)
+        text = f"{username} - {reyting}"
+        image_editable.text((381,490), text, (0, 0, 0), font=myFont)
         my_image.save("month_result.png")
       if i+1 == 2:
         my_image = Image.open("month_result.png")
         image_editable = ImageDraw.Draw(my_image)
         text = f"{username} - {reyting}"
-        image_editable.text((381,592), text, (0, 0, 0), font=myFont)
+        image_editable.text((381,597), text, (0, 0, 0), font=myFont)
         my_image.save("month_result.png")
       if i+1 == 3:
         my_image = Image.open("month_result.png")
         image_editable = ImageDraw.Draw(my_image)
         text = f"{username} - {reyting}"
-        image_editable.text((381,695), text, (0, 0, 0), font=myFont)
+        image_editable.text((381,693), text, (0, 0, 0), font=myFont)
         my_image.save("month_result.png")
       if i+1 == 4:
         my_image = Image.open("month_result.png")
         image_editable = ImageDraw.Draw(my_image)
         text = f"{username} - {reyting}"
-        image_editable.text((381,798), text, (0, 0, 0), font=myFont)
+        image_editable.text((381,797), text, (0, 0, 0), font=myFont)
         my_image.save("month_result.png")
       if i+1 == 5:
         my_image = Image.open("month_result.png")
@@ -271,7 +270,7 @@ async def month_vipe():
         my_image = Image.open("month_result.png")
         image_editable = ImageDraw.Draw(my_image)
         text = f"{username} - {reyting}"
-        image_editable.text((980,489), text, (0, 0, 0), font=myFont)
+        image_editable.text((980,490), text, (0, 0, 0), font=myFont)
         my_image.save("month_result.png")
       if i+1 == 7:
         my_image = Image.open("month_result.png")
@@ -295,13 +294,13 @@ async def month_vipe():
         my_image = Image.open("month_result.png")
         image_editable = ImageDraw.Draw(my_image)
         text = f"{username} - {reyting}"
-        image_editable.text((980,901), text, (0, 0, 0), font=myFont)
+        image_editable.text((980,898), text, (0, 0, 0), font=myFont)
         my_image.save("month_result.png")
       if i+1 == 11:
         my_image = Image.open("month_result.png")
         image_editable = ImageDraw.Draw(my_image)
         text = f"{client.get_user(top_month)} - {reyting}"
-        image_editable.text((635,1030), text, (0, 0, 0), font=myFont)
+        image_editable.text((635,1026), text, (0, 0, 0), font=myFont)
         my_image.save("month_result.png")
     chat = client.get_channel(1007301750895677491)
     embed = discord.Embed(
@@ -343,7 +342,7 @@ async def day_vipe():
     reyting = sorted_reyt[keys_list[0]]
     my_image = Image.open("day_maket.png")
     image_editable = ImageDraw.Draw(my_image)
-    text = f"꧁{username} - {reyting}"
+    text = f"{username} - {reyting}"
     image_editable.text((271,573), text, (0, 0, 0), font=myDayFont)
     my_image.save("result.png")
     chat = client.get_channel(1007301750895677491)
