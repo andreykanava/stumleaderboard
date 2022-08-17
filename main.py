@@ -210,7 +210,7 @@ async def week_vipe():
       week_msg = await chat.send(file=file, embed=embed)
     #await msg.edit(file=file, embed=embed)
     print('week reyt sent')
-    await asyncio.sleep(60)#604800
+    await asyncio.sleep(3600)#604800
 
 async def month_vipe():
   global month
@@ -316,7 +316,7 @@ async def month_vipe():
       await month_msg.delete()
       month_msg = await chat.send(file=file, embed=embed)
     #await msg.edit(file=file, embed=embed)
-    await asyncio.sleep(60)#2592000
+    await asyncio.sleep(3600)#2592000
 
 async def day_vipe():
   global day
@@ -359,7 +359,7 @@ async def day_vipe():
       await day_msg.delete()
       day_msg = await chat.send(file=file, embed=embed)
     print('day reyt sent')
-    await asyncio.sleep(60)
+    await asyncio.sleep(3600)
 
 async def error_for():
   chat = client.get_channel(1006561978388590612)
