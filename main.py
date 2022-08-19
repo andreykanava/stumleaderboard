@@ -422,13 +422,14 @@ async def month_reset():
       
     for guild in client.guilds:
         for member in guild.members:
-          week[member.id] = {"voice": 0, "text": 0}
+          month[member.id] = {"voice": 0, "text": 0}
     await asyncio.sleep(2592000)
 
 async def day_reset():
-  for guild in client.guilds:
-      for member in guild.members:
-        week[member.id] = {"voice": 0, "text": 0}
-  await asyncio.sleep(86400)
+  while True:
+    for guild in client.guilds:
+        for member in guild.members:
+          day[member.id] = {"voice": 0, "text": 0}
+    await asyncio.sleep(86400)
 
 client.run('MTAwNTQ3NDM3MzIzMjI1MDk3MQ.GzM1u6.27UKqUdBdJdqCFrqZI22_ThHOkM2z-BZqDszvU')
